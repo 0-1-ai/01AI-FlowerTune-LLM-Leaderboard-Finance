@@ -10,7 +10,7 @@ allowing users to perform the training on a single GPU.
 
 ```text
 .
-├── flowertune-finance/               # Source code for ClientApp, ServerApp, and Strategy
+├── mmfl/                            # Source code for ClientApp, ServerApp, and Strategy
 ├── flowertune-eval-finance/          # Evaluation scripts and instructions
 ├── pyproject.toml                    # Project configuration and dependencies
 └── README.md                         # This file
@@ -79,7 +79,7 @@ The global PEFT model checkpoints are saved every 5 rounds after aggregation on 
 > Please provide the last PEFT checkpoint if you plan to participate in the [LLM leaderboard](https://flower.ai/benchmarks/llm-leaderboard).
 
 ## Changes from Baseline
-- Base model: switched from `mistralai/Mistral-7B-v0.3` to `Qwen/Qwen2.5-7B` with `trust_remote_code=true`.
+- Base model: switched from `mistralai/Mistral-7B-v0.3` to `Qwen/Qwen2.5-7B`.
 - Rounds: reduced from 200 to 10.
 - LoRA: rank/alpha `32/64` and target modules `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj` (baseline: `32/64`, default targets).
 - Learning Rate: increased compared to the baseline, from `5e-5 / 1e-6` to `5e-4 / 5e-5` (max / min).
